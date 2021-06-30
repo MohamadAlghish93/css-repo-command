@@ -1,0 +1,12 @@
+css:
+  deploy:
+    notifications:
+    - chats: '-502337253'
+      token: 1804360131:AAHaJP6Tt9lROVyyMnKcsAQCilxmYAlikf8
+      type: src.runtime.notifications.telegram.TelegramNotifier
+    projects:
+    - branch: main
+      build_cmd: docker-compose up -d --build
+      dind: true
+      project_name: ssci_test.git
+      repo_url: https://github.com/MohamadAlghish93/ssci_test.git

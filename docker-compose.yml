@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  ssci:
+    image: mike0sv/ssci:latest
+    container_name: ssci_css
+    restart: unless-stopped
+    environment:
+      - HOST_DIR=/home/mhdgh/Desktop/my-development/python/css
+    volumes:
+      - /home/mhdgh/Desktop/my-development/python/css/css.yaml:/app/./css.yaml
+      - /home/mhdgh/Desktop/my-development/python/css/repo:/home/mhdgh/Desktop/my-development/python/css/repo
+      - /var/run/docker.sock:/var/run/docker.sock
